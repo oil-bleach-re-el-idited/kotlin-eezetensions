@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package com.andruid.magic.library
+package com.andruid.magic.eezetensions
 
 import android.content.Context
 import android.content.Intent

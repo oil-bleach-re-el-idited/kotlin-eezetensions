@@ -1,7 +1,8 @@
 @file:Suppress("unused")
 
-package com.andruid.magic.library
+package com.andruid.magic.eezetensions
 
+import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
@@ -16,6 +17,7 @@ import androidx.core.content.getSystemService
 /**
  * Extension function to load color from resource
  * @param color id of the color resource
+ * @return color from color resource
  * @receiver context of the calling component
  */
 fun Context.color(@ColorRes color: Int) = ContextCompat.getColor(this, color)
@@ -23,6 +25,7 @@ fun Context.color(@ColorRes color: Int) = ContextCompat.getColor(this, color)
 /**
  * Extension function to load drawable from resource
  * @param res id of the drawable resource
+ * @return drawable from drawable resource
  * @receiver context of the calling component
  */
 fun Context.drawable(@DrawableRes res: Int) = ContextCompat.getDrawable(this, res)
@@ -44,7 +47,7 @@ fun Context.startFgOrBgService(intent: Intent) {
  * @return true/false
  * @receiver context of the calling component
  */
-@RequiresPermission(android.Manifest.permission.ACCESS_NETWORK_STATE)
+@RequiresPermission(Manifest.permission.ACCESS_NETWORK_STATE)
 fun Context.hasInternet(): Boolean {
     return getSystemService<ConnectivityManager>()?.let { cm ->
         cm.getNetworkCapabilities(cm.activeNetwork)?.let { nc ->

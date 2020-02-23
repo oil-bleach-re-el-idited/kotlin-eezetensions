@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package com.andruid.magic.library
+package com.andruid.magic.eezetensions
 
 import android.content.Intent
 import androidx.annotation.ColorRes
@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 /**
  * Extension function to load color from resource
  * @param color id of the color resource
+ * @return color from color resource
  * @receiver active fragment
  */
 fun Fragment.color(@ColorRes color: Int) = requireContext().color(color)
@@ -18,6 +19,7 @@ fun Fragment.color(@ColorRes color: Int) = requireContext().color(color)
 /**
  * Extension function to load drawable from resource
  * @param res id of the drawable resource
+ * @return drawable from drawable resource
  * @receiver active fragment
  */
 fun Fragment.drawable(@DrawableRes res: Int) = requireContext().drawable(res)
