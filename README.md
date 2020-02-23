@@ -30,3 +30,5 @@ Add to your build.gradle (Module) file in dependencies: [![version](https://img.
 
 - hide()
 - show()
+
+<a href='https://bintray.com/death14stroke/libraries/com.andruid.magic.eezetensions?source=watch' alt='Get automatic notifications about new "com.andruid.magic.eezetensions" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_color.png'></a>
