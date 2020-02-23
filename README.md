@@ -1,8 +1,8 @@
 # kotlin-eezetensions
-Extension functions which I found can be useful and save time and code
+Extension functions which I found can be useful and save time and code [ ![Download](https://api.bintray.com/packages/death14stroke/libraries/com.andruid.magic.eezetensions/images/download.svg) ](https://bintray.com/death14stroke/libraries/com.andruid.magic.eezetensions/_latestVersion)
 
 ## Use
-Add to your build.gradle (Module) file in dependencies:
+Add to your build.gradle (Module) file in dependencies: [![version](https://img.shields.io/badge/version-latest-blue.svg)](https://github.com/Death14Stroke/kotlin-eezetensions/releases/latest)
 
 ```implementation 'com.andruid.magic:eezetensions:1.0.0'```
 
