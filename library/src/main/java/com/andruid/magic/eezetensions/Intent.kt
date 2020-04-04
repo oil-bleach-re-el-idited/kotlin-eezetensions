@@ -17,3 +17,14 @@ fun Context.buildSettingsIntent(): Intent {
     return Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
         .setData(uri)
 }
+
+/**
+ * Get intent to show hotspot settings screen
+ * @return intent to launch hotspot settings
+ * @receiver context of the calling component
+ */
+fun Context.buildHotspotSettingsIntent(): Intent {
+    return Intent()
+        .setClassName("com.android.settings", "com.android.settings.wifi.mobileap.WifiApSettings")
+        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+}

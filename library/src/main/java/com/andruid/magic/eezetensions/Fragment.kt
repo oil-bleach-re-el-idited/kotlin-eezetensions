@@ -6,7 +6,6 @@ import android.content.Intent
 import android.widget.Toast
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
-import androidx.annotation.RequiresPermission
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 

@@ -70,8 +70,7 @@ fun Context.hasInternet(): Boolean {
  */
 fun Context.getPackageVersion(): String? {
     return try {
-        val pInfo = packageManager.getPackageInfo(applicationContext.packageName, 0)
-        pInfo.versionName
+        packageManager.getPackageInfo(applicationContext.packageName, 0).versionName
     } catch (e: PackageManager.NameNotFoundException) {
         e.printStackTrace()
         null
@@ -112,3 +111,24 @@ fun Context.toast(@StringRes msgRes: Int, duration: Int = Toast.LENGTH_SHORT, fr
  */
 fun Context.getUserDeviceName(): String =
         Settings.Global.getString(contentResolver, "device_name")
+
+/**
+ * Get the application name
+ * @return application name
+ * @receiver context of the calling component
+ */
+fun Context.getApplicationName(): String {
+    val stringId = applicationInfo.labelRes
+    return if (stringId == 0)
+        applicationInfo.nonLocalizedLabel.toString()
+    else
+        getString(stringId)
+}
+
+/**
+ * Check whether mobile data is enabled
+ * @return true/false
+ * @receiver context of the calling component
+ */
+fun Context.isMobileDataEnabled() =
+    Settings.Global.getInt(contentResolver, "mobile_data", 1) == 1
