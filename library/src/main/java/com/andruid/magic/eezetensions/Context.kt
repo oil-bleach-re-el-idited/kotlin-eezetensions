@@ -1,5 +1,3 @@
-@file:Suppress("unused")
-
 package com.andruid.magic.eezetensions
 
 import android.Manifest

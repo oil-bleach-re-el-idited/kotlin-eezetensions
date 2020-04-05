@@ -1,5 +1,3 @@
-@file:Suppress("unused")
-
 package com.andruid.magic.eezetensions
 
 import android.content.Context
@@ -19,12 +17,11 @@ fun Context.buildSettingsIntent(): Intent {
 }
 
 /**
- * Get intent to show hotspot settings screen
- * @return intent to launch hotspot settings
- * @receiver context of the calling component
+ * Get intent to show tether settings screen (Hotspot, Bluetooth and USB Tethering)
+ * @return intent to launch tether settings
  */
-fun Context.buildHotspotSettingsIntent(): Intent {
+fun buildTetherSettingsIntent(): Intent {
     return Intent()
-        .setClassName("com.android.settings", "com.android.settings.wifi.mobileap.WifiApSettings")
+        .setClassName("com.android.settings", "com.android.settings.TetherSettings")
         .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
 }

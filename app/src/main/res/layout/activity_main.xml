@@ -7,12 +7,72 @@
     tools:context="com.andruid.magic.sample.MainActivity">
 
     <TextView
+        android:id="@+id/packageVersionTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        tools:text="Package version"
+        app:layout_constraintBottom_toTopOf="@id/deviceNameTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/deviceNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Device name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/packageVersionTV"
+        app:layout_constraintBottom_toTopOf="@id/appNameTV"/>
+
+    <TextView
+        android:id="@+id/appNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="App name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deviceNameTV"
+        app:layout_constraintBottom_toTopOf="@id/hasInternetBtn" />
+
+    <Button
+        android:id="@+id/hasInternetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_connectivity"
+        app:layout_constraintBottom_toTopOf="@id/mobileDataBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appNameTV" />
+
+    <Button
+        android:id="@+id/mobileDataBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_mobile_data_connectivity"
+        app:layout_constraintBottom_toTopOf="@id/settingsBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hasInternetBtn" />
+
+    <Button
+        android:id="@+id/settingsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_settings"
+        app:layout_constraintTop_toBottomOf="@id/mobileDataBtn"
+        app:layout_constraintBottom_toTopOf="@id/tetherSettingsBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/tetherSettingsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tether_settings"
+        app:layout_constraintTop_toBottomOf="@id/settingsBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
