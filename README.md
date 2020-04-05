@@ -4,7 +4,11 @@ Extension functions which I found can be useful and save time and code [ ![Downl
 ## Use
 Add to your build.gradle (Module) file in dependencies: [![version](https://img.shields.io/badge/version-latest-blue.svg)](https://github.com/Death14Stroke/kotlin-eezetensions/releases/latest)
 
-```implementation 'com.andruid.magic:eezetensions:1.0.2'```
+```implementation 'com.andruid.magic:eezetensions:1.0.3'```
+
+### Global
+
+- buildTetherSettingsIntent(): Intent
 
 ### android.content.Context
 
@@ -16,7 +20,9 @@ Add to your build.gradle (Module) file in dependencies: [![version](https://img.
 - toast(msg: String, duration: Int = Toast.LENGTH_SHORT, fromBg: Boolean = false)
 - toast(@StringRes msgRes: Int, duration: Int = Toast.LENGTH_SHORT, fromBg: Boolean = false)
 - getUserDeviceName(): String
-- buildSettingsIntent(): Intent 
+- buildSettingsIntent(): Intent
+- getApplicationName(): String
+- isMobileDataEnabled(): Boolean
 
 ### androidx.fragment.app.Fragment
 
